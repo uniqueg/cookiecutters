@@ -1,0 +1,40 @@
+org:
+  name: J Doe Org
+  slug: <<<infer>>>
+  copyright_owner: <<<infer>>>
+  git_host: <<<infer>>>
+  docker_host: <<<infer>>>
+
+user:
+  name: J Doe
+  slug: <<<infer>>>
+  email: j.doe@email.com
+  affiliation: <<<infer>>>
+  url: <<<infer>>>
+
+project:
+  name: my project
+  slug: <<<infer>>>
+  path: <<<infer>>>
+  synopsis: Some description.
+  version: 0.1.0
+  tags: some tag, some other tag
+  license: apache2
+  copyright_year: <<<infer>>>
+  original_author: <<<infer>>>
+  git_repo: <<<infer>>>
+  docker_image_name: <<<infer>>>
+
+soft:
+  python_version: <<<<infer>>>
+  docs: 'yes'
+  docker: 'yes'
+  packaging: 'yes'
+  cli_script: 'yes'
+  linter: flake8
+  testing: pytest
+  ci_cd: gitlab_docker
+  auto_version_bump: 'yes'
+
+extra_category:
+  extra_field: bla

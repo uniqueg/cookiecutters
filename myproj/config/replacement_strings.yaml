@@ -1,0 +1,40 @@
+packaging:
+  long_description: |-
+    "# Read long description from file
+    with open(\"README.md\", \"r\") as fh:
+    long_description = fh.read()"
+  requirements: |-
+    "# Read requirements from file
+    install_requires = []
+    with open(\"requirements.txt\") as fh\:
+        install_requires = fh.read().splitlines()"
+  long_description_argument: |-
+    "long_description=long_description,
+    long_description_content_type=\"text/markdown\","
+  entry_points_arguments: |-
+    "    entry_points={
+        'console_scripts': [
+            '{{cookiecutter.project_slug}} = src.{{cookiecutter.project_slug}}:main',
+        ],
+    },"
+  manifest_exclusions: |-
+    "exclude .gitignore
+    exclude .gitlab-ci.yaml"
+
+soft:
+  docker_entrypoint: |-
+    "ENTRYPOINT [\"{{cookiecutter.project.slug}}/{{cookiecutter.project.slug}}.py\"]"
+
+ci_cd:
+  install_requirements:
+    gitlab_docker: |-
+      "- pip install -r requirements.txt"
+  test_cli:
+    gitlab_docker: |-
+      "- python src/{{cookiecutter.project.slug}}.py --help"
+  test_pytest:
+    gitlab_docker: |-
+      "- pytest"
+  test_flake8:
+    gitlab_docker: |-
+      "- flake8 {{cookiecutter.project.slug}}/"

@@ -1,0 +1,11 @@
+image: python:{{cookiecutter.python_version}}
+
+before_script:
+{{cookiecutter.replace.ci_cd.install_requirements.gitlab_docker}}
+
+test:
+  script:
+{{cookiecutter.replace.ci_cd.test_cli.gitlab_docker}}
+{{cookiecutter.replace.ci_cd.test_flake8.gitlab_docker}}
+{{cookiecutter.replace.ci_cd.test_pytest.gitlab_docker}}
+

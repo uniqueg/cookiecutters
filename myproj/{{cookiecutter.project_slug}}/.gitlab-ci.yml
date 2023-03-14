@@ -1,0 +1,7 @@
+image: python:{{cookiecutter.python_version}}
+
+test:
+  script:
+    - python src/{{cookiecutter.project_slug}}.py
+    - pytest
+

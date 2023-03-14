@@ -1,0 +1,10 @@
+Subject: [GitLab] Add project
+
+Dear lab manager
+
+Please create a GitLab project with the following options:
+[project URL] {{cookiecutter.project_git_repo}}
+[author profile] {{cookiecutter.author_gitlab_profile}}
+[author role] Maintainer
+
+Thanks

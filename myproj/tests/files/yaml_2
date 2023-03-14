@@ -1,0 +1,13 @@
+project:
+  name: Some other name
+  synopsis: Some description
+  version:
+    - 1.2.3
+    - 2.3.4
+  tags:
+    tag1: a
+    tag2: b
+    tag3: c
+  other_field: some value
+
+

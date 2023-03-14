@@ -1,0 +1,17 @@
+{
+    "project_name": "my project",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "project_description": "One-liner describing what the project is about",
+    "project_version": "0.1.0",
+    "project_git_repo": "https://git.scicore.unibas.ch/zavolan_group/tools/{{cookiecutter.project_slug}}",
+    "project_docker_repo": "zavolab/{{cookiecutter.project_slug}}:{{cookiecutter.project_version}}",
+    "project_tags": "bioinformatcs",
+    "project_license": "Apache license 2.0",
+    "copyright_year": "{% now 'utc', '%Y' %}",
+    "copyright_owner": "Zavolan lab, Biozentrum, University of Basel",
+    "author_name": "J Doe",
+    "author_affiliation": "{{ cookiecutter.copyright_owner }}",
+    "author_email": "j.doe@email.com",
+    "author_gitlab_profile": "https://git.scicore.unibas.ch/jdoe",
+    "python_version": "3.8.1"
+}

@@ -1,0 +1,25 @@
+org:
+  copyright_owner: J Doe Org
+  docker_host: registry.hub.docker.com/jdoeorg
+  git_host: https://github.com/j_doe_org
+  name: J Doe Org
+  slug: j_doe_org
+soft:
+  auto_version_bump: 'yes'
+  ci_cd:
+  - gitlab_docker
+  cli_script: 'yes'
+  docker: 'yes'
+  docs: 'yes'
+  linter:
+  - flake8
+  packaging: 'yes'
+  python_version: 3.6.8
+  testing:
+  - pytest
+user:
+  affiliation: J Doe Org
+  email: alexander.kanitz@unibas.ch
+  name: Alex Kanitz
+  slug: alex_kanitz
+  url: https://github.com/alex_kanitz

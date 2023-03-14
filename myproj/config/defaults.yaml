@@ -1,0 +1,234 @@
+# DO NOT EDIT THIS DOCUMENT UNLESS YOU ARE SURE THAT YOU KNOW WHAT YOU ARE
+# DOING!
+org:
+  name:
+    value: J Doe Org
+    description: |-
+      Name of the organization that you are developing this project for.
+  slug:
+    value: <<<infer>>>
+    description: |-
+      Machine-friendly short name of the organization used to build reasonable
+      defaults for organization spaces, e.g., at Docker Hub.
+  copyright_owner:
+    value: <<<infer>>>
+    description: |- 
+      Name of the copyright owner (most likey the organization that you are
+      developing the project for.
+  git_host:
+    value: <<<infer>>>
+    description: |-
+      Your organization's space at a Git registry such as GitHub or GitLab.
+  docker_host:
+    value: <<<infer>>>
+    description: |-
+      Your organization's space at a Docker registry such as Docker Hub.
+
+user:
+  name:
+    value: J Doe
+    description: |-
+      Your name as you would like to have it added to the project. You will be
+      listed as the maintainer of the project. If you are creating the project
+      on someone else's behalf, please add their desired name.
+  slug:
+    value: <<<infer>>>
+    description: |-
+      Machine-friendly short user name or handle used to build reasonable
+      defaults for user spaces, e.g., at GitHub.
+  email:
+    value: j.doe@email.com
+    description: |-
+      A single email address at which you would like to be contacted with
+      requests or questions regarding the project. If you are creating the
+      project on someone else's behalf, please add their desired email address.
+  affiliation:
+    value: <<<infer>>>
+    description: |-
+      One or more organizations that you are affiliated with and that you would
+      like to be added to the project. Separate multiple entries by the pipe
+      or forward slash characters (|/). If you are creating the project on
+      someone else's behalf, please add their desired affiliation(s).
+  url:
+    value: <<<infer>>>
+    description: |-
+      A single personal URL that you would like to associate with the project,
+      such as your GitHub or LinkedIn URL. If you are creating the project on
+      someone else's behalf, please add their desired URL.
+
+project:
+  name:
+    value: my project
+    description: Name of the project. Only used in human-readable documents.
+  slug:
+    value: <<<infer>>>
+    description: |-
+      Machine-friendly short descriptive name of the project. Only lowercase
+      characters and the underscore are allowed. NOTE: If you enable any of the
+      available facilitated publishing options (e.g., Docker image or package
+      registry), ideally this "project slug" should still be available at the
+      desired services, unless you wish (and have the permissions) to upload
+      and replace any exisiting projects that use the same project slug. If
+      naming clashes cannot be avoided, the targets for each publishing service
+      can be modified further below, but note that inconsistent naming of your
+      project across different impedes user experience.
+  path:
+    value: <<<infer>>>
+    description: |-
+      Desired root directory of the project. For safety reason, the project
+      will *not* be created if the directory exists.
+  synopsis:
+    value: |-
+      Changes the world given a YAML config file.
+    description: Short description of what the project does.
+  version:
+    value: 0.1.0
+    description: |-
+      Initial or current (for existing projects) version of the project.
+  tags:
+    value: some tag, some other tag
+    description: |-
+      List of relevant tags for the projects. Facilitates finding of the
+      project upon publication.
+  license:
+    value: apache2
+    choices:
+      - apache2
+      - gplv3
+      - mit
+      - mozilla2
+    multiple: False
+    alternative: none
+    description: |-
+      License to be added to the project root and to any relevant metadata
+      section.
+  copyright_year:
+    value: <<<infer>>>
+    description: Year for copyright notice.
+  original_author:
+    value: <<<infer>>>
+    description: |-
+      Only enter if the original author is different from you (or the person
+      the project is created for).
+  git_repo:
+    value: <<<infer>>>
+    description: |-
+      Remote URL where the project will be hosted (or is already hosted, for
+      existing projects). A remote origin targeting the supplied URL will be
+      added to the project. Make sure that the provided repository exists and
+      that you and any other authors have the necessary permissions to push
+      commits.
+  docker_image_name:
+    value: <<<infer>>>
+    description: |-
+      Docker image name for publishing a built Docker image to a registry. Mind
+      the rules that govern Docker image names. In particular, note that if you
+      desire to push to a registry that is *not* Docker Hub, the target
+      registry's URL needs to be added to the beginning of the image name.
+
+soft:
+  python_version:
+    value: <<<<infer>>>
+    description: Python version to be used for development.
+  docs:
+    value: 'yes'
+    choices:
+      - 'yes'
+      - 'no'
+    multiple: False
+    alternative: Null
+    description: |-
+      Should a basic documentation template be added to the project root
+      directory in file README.md?
+  docker:
+    value: 'yes'
+    choices:
+      - 'yes'
+      - 'no'
+    multiple: False
+    alternative: Null
+    description: |-
+      Should a Dockerfile template be added to the project root? This allows
+      the project to be built with all its dependencies in an image that can
+      then be used to execute the project reproducibly in isolated
+      "containers" which do not require installation and are therefore
+      particularly amenable to be run in the cloud or as part of analysis
+      workflows by workflow managers that support containers. It further
+      facilitates publishing and distribution of the project via registries
+      such as Docker Hub.
+  packaging:
+    value: 'yes'
+    choices:
+      - 'yes'
+      - 'no'
+    multiple: False
+    alternative: Null
+    description: |-
+      Should standard Python packaging files and software dependencies be added
+      to the project? This facilitates publishing and distribution of the
+      project, e.g., via the Python Package Index (PyPI), as well as
+      installation of the project via package managers such as pip.
+  cli_script:
+    value: 'yes'
+    choices:
+      - 'yes'
+      - 'no'
+    multiple: False
+    alternative: Null
+    description: |-
+      Should a CLI script template be added to the source code directory?
+  linter:
+    value: flake8
+    choices:
+      - flake8
+      - pylint
+      - pyright
+    multiple: True
+    alternative: none
+    description: |-
+      Should one or more linters be added to the project? Selected supported
+      linters (separate multiple entries by commas) will be added to the
+      software requirements in file requirements.txt in the project root.
+  testing:
+    value: pytest
+    choices:
+      - pytest
+    multiple: True
+    alternative: none
+    description: |-
+      Should one or more testing frameworks be added to the project? Selected
+      supported testing frameworks (separate multiple entries by commas) will
+      be added to the software requirements in file requirements.txt in the
+      project root.
+  ci_cd:
+    value: gitlab_docker
+    choices:
+      - gitlab_docker
+    multiple: True
+    alternative: none
+    description: |-
+      Should a CI/CD pipeline template file be added to the project? This will
+      enable easy configuration of automated testing and publishing. By
+      default, the running of tests (if selected) will be added for every
+      commit. Commands required for publishing the project at hosting services
+      (select below) will be added only for pushes to the master branch.
+      However, these will be commented out in the generated template so that
+      nothing is going to be published unless you specifically opt in!
+  auto_version_bump:
+    value: 'yes'
+    choices:
+      - 'yes'
+      - 'no'
+    multiple: False
+    alternative: Null
+    description: |-
+      Include a pre-commit Git hook that automatically increases the version
+      number for each push to (or merges of feature branches into) the master
+      branch (only one version increase per push/merge, not per commit). Note
+      that this requires adherence to semantic versioning
+      (https://semver.org/). By default, only the build number, based on the
+      timestamp of the push/merge (YYYYMMDDHHMMSS) is increased (or added, if
+      previously absent). Please add the following directives inside any of
+      your commit messages to increase the patch, minor or major version number
+      instead: [bump patch], [bump minor], [bump major]. In case of multiple
+      matching directives, only the highest priority directive is considered.
